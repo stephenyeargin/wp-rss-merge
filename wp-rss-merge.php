@@ -19,7 +19,7 @@ class RSSMerge {
   /**
    * Constructor
    */
-  function __construct($urls, $count=1) {
+  function __construct($urls, $count=10) {
     $this->config = array();
     $this->config['urls'] = (string) $urls;
     $this->config['count'] = (int) $count;
@@ -149,7 +149,7 @@ class RSSMergeWidget extends WP_Widget {
   function __construct() {
 
     /* Widget settings. */
-    $widget_ops = array( 'classname'=>'rssmerge-widget', 'description'=>__('Multi-feed RSS') );
+    $widget_ops = array( 'classname'=>'rssmerge-widget', 'description'=>__('Merges multiple RSS feeds into a single list.') );
 
     /* Widget control settings. */
     $control_ops = array( 'id_base'=>'rssmerge-widget', 'width'=>300  );
@@ -193,7 +193,7 @@ class RSSMergeWidget extends WP_Widget {
 
   function form( $instance ) {
 
-    $defaults = array( 'urls' => 'http://wordpress.org/news/feed/'."\n".'http://stephenyeargin.com/feed/', 'count' => 10 );
+    $defaults = array( 'urls' => 'http://wordpress.org/news/feed/'."\n".'http://feeds.mashable.com/Mashable'."\n".'http://feeds.feedburner.com/TechCrunch/', 'count' => 10 );
     $instance = wp_parse_args( (array) $instance, $defaults );
 
     printf('<p><label>Title <input type="text" name="%s" id="%s" value="%s" /></label></p>',
@@ -218,7 +218,7 @@ add_action( 'widgets_init', 'rssmerge_register_widgets' );
  * @param string $username
  * @param int $count
  */
-function theme_rssmerge($urls, $count=1) {
+function theme_rssmerge($urls, $count=10) {
 
   if (!class_exists('RSSMerge'))
     return false;
