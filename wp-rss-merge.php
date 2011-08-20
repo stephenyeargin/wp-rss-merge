@@ -29,7 +29,7 @@ class RSSMerge {
     // Go ahead and make query
     $this->getFeedData();
     
-    uksort($this->data, 'self::sortFeedByDate');
+    uksort($this->data, array($this, 'sortFeedByDate') );
     
     $this->data = array_slice($this->data, 0, $count);
     
