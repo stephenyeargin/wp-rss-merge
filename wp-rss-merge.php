@@ -200,7 +200,7 @@ class RSSMergeWidget extends WP_Widget {
       $this->get_field_name('title'), $this->get_field_id('title'), htmlentities($instance['title']));
     printf('<p><label>Feed URLs <textarea name="%s" id="%s" style="width:300px;">%s</textarea></label></p>',
       $this->get_field_name('urls'), $this->get_field_id('urls'), __($instance['urls']));
-    printf('<p><label>Tweet Count <input type="text" name="%s" id="%s" value="%d" /></label></p>',
+    printf('<p><label>Item Count <input type="text" name="%s" id="%s" value="%d" /></label></p>',
       $this->get_field_name('count'), $this->get_field_id('count'), $instance['count']);
   }
 }
