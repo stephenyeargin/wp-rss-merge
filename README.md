@@ -6,11 +6,11 @@ This plugin allows you to have a sidebar widget that pulls from multiple RSS fee
 Installation:
 -------------
 
-# Copy the `wp-rss-merge` folder to your `wp-content/plugins/` directory, so that your final path looks like `wp-content/plugins/wp-rss-merge/`
-# Activate the plugin from the 'Plugins' menu.
-# Drag the `Multi-Feed Widget` to a position in your defined sidebars (again, your theme must support dynamic sidebars)
-# Configure the feeds and title for your widget
-# Style the widget as you so desire
+1. Copy the `wp-rss-merge` folder to your `wp-content/plugins/` directory, so that your final path looks like `wp-content/plugins/wp-rss-merge/`
+2. Activate the plugin from the 'Plugins' menu.
+3. Drag the `Multi-Feed Widget` to a position in your defined sidebars (again, your theme must support dynamic sidebars)
+4. Configure the feeds and title for your widget
+5. Style the widget as you so desire
 
 Support:
 --------
